@@ -63,7 +63,7 @@ func FindEnemy() {
 			Clear()
 			OwnStruct := GetOwnStatus()
 			if OwnStruct.Grade == 9 {
-				fmt.Println("Game Over")
+				panic("game over")
 			}
 			OwnStatus := "你的" /*+ OwnStruct.Name */ + "现在状态为：\n" + "\t级别：" + strconv.Itoa(OwnStruct.Grade) + "\n\t等级：" + strconv.Itoa(OwnStruct.Level) + "\n\t经验：" + strconv.Itoa(OwnStruct.Experience) + "% \n"
 			fmt.Println(OwnStatus)
@@ -104,4 +104,3 @@ func FindEnemy() {
 	}
 
 }
-

@@ -4,5 +4,6 @@
 - [x] 随机敌人生成
 - [ ] redis配置文件
 - [x] 数据json化  不做，redis读json不方便
+- [ ] 彩蛋
 - [ ] 基于notify，重写git.sh，自动提交
 
