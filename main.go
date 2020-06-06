@@ -6,7 +6,7 @@
 package main
 
 import (
-	"kun/until"
+	"kun-golang/until"
 	"time"
 )
 
