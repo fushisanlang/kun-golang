@@ -4,6 +4,7 @@ import (
 	"github.com/garyburd/redigo/redis"
 )
 
+//用于设置和查看敌人参数
 func GetEnemyStatus() EnemyStruct {
 	RedisClient, err := redis.Dial("tcp", RedisInfo())
 	CheckErr(err)
@@ -31,4 +32,3 @@ func SetEnemyStatus(EnemyStatus EnemyStruct) {
 	CheckErr(err)
 
 }
-

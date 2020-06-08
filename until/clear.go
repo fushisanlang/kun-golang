@@ -5,7 +5,7 @@
 
 package until
 
+//清屏函数
 func Clear() {
 	print("\033[H\033[2J")
 }
-

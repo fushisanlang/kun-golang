@@ -4,6 +4,7 @@ import (
 	"github.com/garyburd/redigo/redis"
 )
 
+//判断redis中，打印函数
 func GetPrintStatus() string {
 	RedisClient, err := redis.Dial("tcp", RedisInfo())
 	CheckErr(err)
@@ -12,6 +13,8 @@ func GetPrintStatus() string {
 	CheckErr(err)
 	return PrintSwitch
 }
+
+//设置打印参数,用来控制屏显个人信息
 func SetPrintStatus(PrintSwitch string) {
 	RedisClient, err := redis.Dial("tcp", RedisInfo())
 	CheckErr(err)
@@ -21,4 +24,3 @@ func SetPrintStatus(PrintSwitch string) {
 	CheckErr(err)
 
 }
-

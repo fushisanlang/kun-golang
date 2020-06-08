@@ -4,6 +4,7 @@ import (
 	"github.com/garyburd/redigo/redis"
 )
 
+//获取和设置redis中的个人参数
 func GetOwnStatus() OwnStruct {
 	RedisClient, err := redis.Dial("tcp", RedisInfo())
 	CheckErr(err)
@@ -34,4 +35,3 @@ func SetOwnStatus(OwnStatus OwnStruct) {
 	CheckErr(err)
 
 }
-

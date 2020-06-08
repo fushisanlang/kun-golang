@@ -15,6 +15,7 @@ import (
 var str string
 var num, num2 int
 
+//三阶名称定义
 var GradeOne = [4][7]string{
 	{"亢金龙", "角木蛟", "箕水豹", "尾火虎", "氐土貉", "房日兔", "心月狐"},
 	{"鬼金羊", "井木犴", "轸水蚓", "翼火蛇", "柳土獐", "星日马", "张月鹿"},
@@ -35,6 +36,7 @@ var GradeThree = [4][7]string{
 	{"作噩", "阉茂", "紫薇", "帝鸿", "大渊献", "羲御", "玄烛"},
 }
 
+//个人属性定义
 type OwnStruct struct {
 	Direction  int
 	Treasure   int
@@ -43,10 +45,9 @@ type OwnStruct struct {
 	Grade      int
 }
 
+//起始函数
 func init() {
 	Clear()
-	//	color.Set(color.FgBlack, color.BgWhite)
-	//defer color.Unset()
 	fmt.Println("                tunshi  KUN              ")
 	fmt.Println("                                         ")
 	fmt.Println("                version 0.1              ")
@@ -59,7 +60,6 @@ func init() {
 
 	var treasure, direction int
 
-	//fmt.Println(GradeOne)
 	stage1 := "你现在有一颗鲲蛋，你想在什么地方孵化？\n" +
 		"1.东胜神洲\n" +
 		"2.南赡部洲\n" +
@@ -103,6 +103,8 @@ func init() {
 	CheckErr(err)
 	SetPrintStatus("on")
 }
+
+//根据输入输出名字
 func PrintEgg(grade, direction, treasure int) string {
 	grade = grade + 1
 	var name string
@@ -116,4 +118,3 @@ func PrintEgg(grade, direction, treasure int) string {
 	}
 	return name
 }
-

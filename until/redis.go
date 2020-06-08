@@ -1,6 +1,9 @@
 package until
 
+//返回redis连接信息
 func RedisInfo() string {
-	return "127.0.0.1:6379"
+	ServerIp := readconf("ServerIp")
+	ServerPort := readconf("ServerPort")
+	ReturnStr := ServerIp + ":" + ServerPort
+	return ReturnStr
 }
-
