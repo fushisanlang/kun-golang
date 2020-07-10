@@ -1,6 +1,7 @@
 package until
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -10,8 +11,10 @@ func ExAdd(Experience, Level, Grade, ExBase, LvBase, GradeBase int, GameEndChan 
 	Level = Level + LvBase
 	Grade = Grade + GradeBase
 	if Experience > 99 {
+		fmt.Println("升级")
 		Level = Level + 1
 		if Level > 99 {
+			fmt.Println("进化")
 			Grade = Grade + 1
 			if Grade > 2 {
 				GameEndChan <- true

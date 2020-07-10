@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-//输入概率摆动参数addpart，随机生成概率。如果概率大约50+addpart，则获胜，返回true，反之失败，返回false
+//输入概率摆动参数addpart，随机生成概率。如果概率大于50+addpart，则获胜，返回true，反之失败，返回false
 func Fight(addpart int) int {
 	rand.Seed(time.Now().Unix())
 	probability := rand.Intn(100)
